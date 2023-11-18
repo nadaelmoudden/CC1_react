@@ -1,38 +1,102 @@
-.App {
+:root {
+  --background: #ffffff;
+  --text-primary: #000;
+  --text-secondary: #8e05c2;
+  --accent: #8e05c2;
+  --border: #333;
+  --form-bg: #fff;
+}
+
+[data-theme='dark'] {
+  --background: #000;
+  --text-primary: #fff;
+  --text-secondary: #8e05c2;
+  --accent: #8e05c2;
+  --border: #808080;
+  --form-bg: #191919;
+}
+
+
+body {
+  background-color: var(--background);
+}
+
+h2 {
   text-align: center;
+  padding: 1rem;
+  color: var(--text-secondary); 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.theme-toggle i {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--accent);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.theme-toggle {
+  text-align: center;
+  background-color: var(--form-bg); 
   min-height: 100vh;
+  /* border: 1px solid var(--border);  */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.language-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: center; 
+  text-align: center; 
+}
+
+.language-switcher button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  color: #333;
 }
 
-.App-link {
-  color: #61dafb;
+.language-switcher button:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.language-switcher button:hover {
+  background-color: #f0f0f0;
+}
+
+
+.flag-button p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333; 
+}
+
+.language-switcher p {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #333; 
+  margin-top: 20px; 
+  line-height: 1.5; 
+  font-weight: bold; 
 }

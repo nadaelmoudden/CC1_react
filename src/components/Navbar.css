@@ -1,0 +1,20 @@
+.navbar {
+    background-color: var(--navbar-bg); /* Use the background variable */
+    color: var(--navbar-text);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    }
+    
+    .content-container {
+        margin-top: 5;
+}
+
+[data-theme='dark'] .navbar {
+    background-color: var(--dark-navbar-bg); /* Dark mode background color */
+    color: var(--dark-navbar-text); /* Dark mode text color */
+    /* Additional styles for dark theme */
+}
+
+
